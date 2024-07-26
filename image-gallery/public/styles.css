@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+#imageList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#imageList img {
+    width: 150px;
+    height: auto;
+    margin: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+#imageList img:hover {
+    border: 2px solid #007bff;
+}
+
+#selectedImageContainer {
+    margin-top: 20px;
+}
+
+#selectedImage {
+    max-width: 100%;
+    height: auto;
+}
+
+#imageStackContainer {
+    margin-top: 20px;
+}
+
+#imageStack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.stack-group {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+}
+
+.stack-group .stack-item {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    transition: transform 0.2s;
+}
+
+.stack-group .stack-item img {
+    width: 100px;
+    height: auto;
+}
+
+.stack-group .stack-item:nth-child(1) {
+    transform: translateY(0px) translateX(0px);
+}
+
+.stack-group .stack-item:nth-child(2) {
+    transform: translateY(-10px) translateX(-10px);
+}
+
+.stack-group .stack-item:nth-child(3) {
+    transform: translateY(-20px) translateX(-20px);
+}
+
+.stack-group .count {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 2px 5px;
+    font-size: 14px;
+    border-top-left-radius: 5px;
+}
+
+#totalCountContainer {
+    margin-top: 20px;
+}
